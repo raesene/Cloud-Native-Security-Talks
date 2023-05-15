@@ -1,0 +1,8 @@
+I"d<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/3bE7o0-1CHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Role-based access control (RBAC) is an unavoidable part of the Kubernetes developer experience. Whether it is engineers managing cluster resources via kubectl or internal service accounts interacting with the Kubernetes API directly, development teams will need to understand how to build and distribute effective, least permissive RBAC policies. This session will first go back in time to help attendees understand exactly how RBAC works under the hood and explore some lesser-known RBAC gotchas. We will then cover the essential pillars of designing an effective RBAC strategy for the enterprise including automation and observability opportunities. After this session, attendees can expect to have a better understanding on how to build and monitor least privilege RBAC configurations within Kubernetes.</p>
+:ET

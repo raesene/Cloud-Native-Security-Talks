@@ -1,0 +1,8 @@
+I"J<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/-I1JjJxy-rU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>For generations, secrets have been kept, shared, and exposed. Most would agree that the best-kept secrets are the ones we’ve never heard of or told others about. The concepts that revolve around maintaining safe secrets are universal and stem from addressing these questions: “Where is the secret kept?”, “Who needs to know about the secret?”, “How does the secret get shared with the relevant parties?”, and “How do you prevent the secret from being easily interpreted?” The answers can help you create a secure lifecycle for storing, sharing, and consuming secrets. In Kubernetes, a secure secret strategy depends on the answers to these same questions. Now more than ever, the vulnerabilities around the storage, sharing, and consumption of secrets in Kubernetes are well known, and as a result, more likely to be exploited. In this talk, Lukonde Mwila will share why addressing these questions can optimize managing sensitive data in Kubernetes. In addition, he’ll highlight details of a Kubernetes secret strategy from a real-world project in relation to these questions. Lastly, he’ll share how answers to these questions can be used to develop a framework for a secure secret lifecycle in Kubernetes environments with a demo using ESO, ArgoCD, and OPA Gatekeeper.</p>
+:ET

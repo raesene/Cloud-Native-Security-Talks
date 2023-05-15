@@ -1,0 +1,8 @@
+I"m<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/YGN0Z9SOVBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>To graduate, a CNCF project must complete a third party security audit and publish the results publicly. Because of the nature of the work, much of it is done behind closed doors. In this talk, Adam and David present their experiences with auditing CNCF projects, how a security audit progresses, what the projects should expect, and what the outcomes have been so far. We also examine which vulnerabilities have been found, and what is required from the CNCF projects to complete a third party security audit. Over the last year and a half, Ada Logics has carried out security audits of six CNCF projects and worked with the projects on mitigating found issues and publishing the results. The projects the team audited were: Flux, CRI-O, KubeEdge, Argo, Istio and Cilium. The talk will also go over the audit reports and how they are helpful to contributors, adopters and other security researchers looking to contribute security work. The talk will cover both high-level problems and results as well as a technical look into the security issues that CNCF projects face.</p>
+:ET

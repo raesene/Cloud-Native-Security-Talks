@@ -1,0 +1,8 @@
+I"'<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/vor-xiV25xM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Security incident response is a well-understood operation, with established best practices like the MITRE Att&amp;ck Framework and the Lockheed Martin Kill Chain. Tooling to aid and automate incident response exists, but not all of it is applicable to cloud-native platforms. For example, playbook apps are generally applicable, but the steps to move compromised workloads to an isolated forensics network are platform-specific, and new implementations are needed for the cloud-native world. In this talk, Francesco and Matt will * Recap incident response 101 * Introduce some cloud-native tech including Kubernetes, Istio, and GitOps * Show an Operator built by Matt for dynamically adding complex layer-7 traffic rules in response to changes in the environment, which will be used as part of the demo * Walk you through a response to a log4shell attack against a workload in a k8s cluster: sensor alert, SIEM analysis, IRP automation (honeypots, isolation), building the IoC, and killing the attack.</p>
+:ET

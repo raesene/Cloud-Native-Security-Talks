@@ -1,0 +1,8 @@
+I"<<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/of6HC26f4i4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>The acronym SBOM (AKA Software Bill of Materials) has become a household term in the wake of the many software supply chain attacks we’ve witnessed recently - from SolarWinds, Log4j, to CodeCov and many others. While much effort and research has gone into tooling and building SBOMs, very little has yet to be done on the infrastructure side. In this talk I’d like to dive into why an IBOM (infrastructure bill of materials) is equally important with cloud native infrastructure ultimately being software defined and driven, and how no SBOM is complete without a full inventory of your infrastructure stacks. We’ll walk into the tools that will enable you to get an equivalent understanding of what is happening in your cloud native infrastructure including which assets, packages and applications are running where - and how this is all only possible with end-to-end codification. We’ll review why this matters from a security perspective - from your service dependencies, to IAM roles, security groups, and even misconfigurations to ensure your infrastructure is properly provisioned and continuously monitored. We’ll wrap up with how to leverage your IBOM not only for cost optimization, but also for removing cloud clutter, to reduce your potential attack service.</p>
+:ET

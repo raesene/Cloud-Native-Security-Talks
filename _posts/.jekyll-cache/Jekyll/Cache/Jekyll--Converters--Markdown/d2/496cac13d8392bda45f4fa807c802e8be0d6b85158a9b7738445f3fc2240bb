@@ -1,0 +1,8 @@
+I"<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/UromHpqlPlE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>In this presentation, we will explore an innovative approach to securing Kubernetes clusters using behavior analysis during continuous integration testing and generating native policies based on behavior. By leveraging continuous  behavioural analysis, we can replace tedious manual policy definitions which take long to define and can break easily. We will also discuss the importance of native policies, which allow us to enforce security policies directly within Kubernetes without relying on third-party tools.We will cover hands-on practices for implementing this approach, including how to integrate behavioral analysis into CI testing and how to use native policies to enforce security policies.By the end of this presentation, attendees will have a deeper understanding of how to leverage innovative approaches to security in Kubernetes clusters, and how to use behavioral analysis and native policies to protect their environments against the latest threats.</p>
+:ET

@@ -1,0 +1,8 @@
+I"A<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/JpeWBKsAlI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Join us as we expose the steps that make Confidential Containers (CoCo) easy to provision and run your first workload! CoCo is an open source community working to enable cloud native confidential computing by leveraging trusted execution environments (TEE) to protect containers and data. CoCo integrates multiple features from many open source projects that need to need to securely and efficiently work together on many distinct hardware technologies, supporting several CRI runtimes, and more that can appear to be complex to get started. We will share how the project’s front-end is an operator responsible for such deployment in a Kubernetes cluster, how to declare your setup via a Custom Resource and simply let the Operator take care of everything else for you.</p>
+:ET

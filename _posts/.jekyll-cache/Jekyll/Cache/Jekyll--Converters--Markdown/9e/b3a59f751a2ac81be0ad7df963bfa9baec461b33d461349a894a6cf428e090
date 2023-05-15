@@ -1,0 +1,8 @@
+I"�<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/PL73BoQxe2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Kubernetes Goat is a “vulnerable by design” Kubernetes Cluster environment to practice and learn about Kubernetes Security. In this session, Madhu Akula will present the latest version of the Kubernetes Goat by exploring different vulnerabilities in Kubernetes Cluster and Containerized environments. Also, he demonstrates the real-world vulnerabilities and maps the Kubernetes Goat scenarios with them.We see a ton of newly added vulnerabilities, CVEs, and mapping with some open source security tools to perform from writing developer code to deploying into production security using different layers like Infrastructure security, Supply chain security, and Runtime security. The newly added scenarios and documentation guide releases help even developers, DevOps teams, and security vendors to showcase and learn about security from attackers’ perspectives.</p>
+:ET

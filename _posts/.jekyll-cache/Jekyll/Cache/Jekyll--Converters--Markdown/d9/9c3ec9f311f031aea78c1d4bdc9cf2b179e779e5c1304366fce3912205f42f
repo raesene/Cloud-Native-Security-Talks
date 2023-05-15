@@ -1,0 +1,8 @@
+I"k<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/aCCm9VowNSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>CNCF is developing its first ever Top 10 list of security risks facing Istio deployments. As a community-driven effort, it draws on the expertise of a wide range of security professionals and cloud native computing experts to ensure the list reflects the most current and relevant security risks facing cloud native applications.The Top 10 will help organizations prioritize their security efforts and focus on the most significant security risks that they may face. By understanding and addressing these risks, organizations can better protect against malicious attacks, data breaches, and other security incidents.In this talk we’ll cover what’s in the list, the selection criteria for it, and discuss strategies organizations should take to mitigate these critical risks to cloud native computing security.</p>
+:ET

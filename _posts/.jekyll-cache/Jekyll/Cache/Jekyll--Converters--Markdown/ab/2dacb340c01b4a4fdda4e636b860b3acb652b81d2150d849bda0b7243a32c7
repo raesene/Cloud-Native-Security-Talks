@@ -1,0 +1,8 @@
+I"<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/N1XvgWXnEik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Amsterdam has over 1200 bridges crossing the city’s many canals and waterways. The web of bridges and canals continues to be used to move people and resources through the city, and has also aided in its defence. This complex lattice of connected components could be likened to a complex Kubernetes network. In this talk we will use Amsterdam’s city structure to visualize the benefits and challenges involved with security a k8s network. We will talk about how to get to know a network; perform a threat model and use the findings to plan and implement a strong security strategy. This talk will share useful network monitoring tools (eBPF anyone?!), important methods for planning a security strategy, go over how to make the most of NetworkPolicies and of course cover the cloud security basics. Attendees will leave this talk feeling ready (and pumped) to try out several strategies for evaluating and implementing security measures for their Kubernetes networks.</p>
+:ET

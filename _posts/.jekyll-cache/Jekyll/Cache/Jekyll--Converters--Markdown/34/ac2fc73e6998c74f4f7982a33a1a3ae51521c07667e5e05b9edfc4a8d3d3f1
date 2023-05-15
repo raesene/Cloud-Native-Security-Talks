@@ -1,0 +1,8 @@
+I"�<h2 id="video">Video</h2>
+
+<iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/fV5q2a0a1yY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>There are plenty of benefits when you control your own certificate authority (CA), whether for just one Kubernetes cluster or for your whole organization. Putting a service mesh into production might require rolling your own CA, for example, but there are other use cases where a private PKI makes sense to avoid the headaches of rate limits, issuance costs or relying on third party services. Luckily for us, the concepts behind Public Key Infrastructure (PKI) have been around since at least the 70s and there are there’s a tonne to learn from existing PKI deployments which we can apply to today’s cloud native landscape. Plus, cert-manager is here to help! In this talk we’ll discuss how to use cert-manager to safely deploy a private PKI at organizational scale and some the things we need to think about to ensure that we can run it safely - without causing a major outage down the road by failing to plan for rotation! Ash is a public key cryptography nerd with prior experience in administering PKI at large scale. As a cert-manager maintainer he’s committed to improving the experience of anyone that runs private PKI in cloud native projects and beyond!</p>
+:ET
