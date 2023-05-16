@@ -1,5 +1,6 @@
-# Kubernetes Security Site
+# Cloud Native Security Talks Site
 
+The site is published at [talks.container-security.site](https://talks.container-security.site)
 
 This is a Github pages site based on the [minimal mistakes template](https://github.com/mmistakes/minimal-mistakes). It hosts videos on Cloud native security from various conferences, along with talk abstracts
 
