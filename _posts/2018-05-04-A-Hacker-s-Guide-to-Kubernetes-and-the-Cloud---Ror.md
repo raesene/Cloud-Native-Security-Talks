@@ -11,4 +11,4 @@ As Kubernetes increases in adoption it is inevitable that more clusters will com
 
 ## Video
 
-<iframe width='560' height='315' src='https://youtu.be/dxKpCO2dAy8' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+<iframe width='560' height='315' src='https://www.youtube.com/embed/Hf5qRgxjPLQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
