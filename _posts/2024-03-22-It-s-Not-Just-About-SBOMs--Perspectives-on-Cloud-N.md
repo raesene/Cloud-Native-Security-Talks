@@ -1,5 +1,5 @@
 ---
-title: "It's Not Just About SBOMs: Perspectives on Cloud Native Supply Chain Security - Michael Lieberman, Kusari; Dana Wang, OpenSSF | The Linux Foundation; Marina Moore, New York University; John Kjell, TestifySec; Arnaud Le Hors, IBM"
+title: "It's Not Just About SBOMs: Perspectives on Cloud Native Supply Chain Security - Michael Lieberman, Kusari; Dana Wang, OpenSSF - The Linux Foundation; Marina Moore, New York University; John Kjell, TestifySec; Arnaud Le Hors, IBM"
 categories: ["KubeCon + CloudNativeCon Europe 2024"]
 ---
 
