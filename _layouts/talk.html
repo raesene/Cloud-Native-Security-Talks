@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{%- assign cat = page.categories.first -%}
+{%- assign siblings = site.categories[cat] | sort: "date" -%}
+{%- assign series = site.data.series | where: "id", page.series | first -%}
+{%- assign date_str = page.date | date: "%Y-%m-%d" -%}
+
+<article class="section talk" aria-labelledby="talk-title">
+  <div class="rail" aria-hidden="true"><span class="rail-num">{{ page.event_code | default: "—" }}</span></div>
+  <div class="talk-grid">
+    <header class="talk-head">
+      <p class="eyebrow"><a href="{{ '/categories/' | relative_url }}#{{ cat | slugify }}">{{ page.event | default: cat }}</a></p>
+      <h1 id="talk-title" class="talk-h1">{{ page.talk_title | default: page.title }}</h1>
+      {%- if page.speakers and page.speakers != "" %}
+      <p class="talk-by">{{ page.speakers }}</p>
+      {%- endif %}
+    </header>
+
+    <div class="talk-video">
+      {%- if page.youtube_id and page.youtube_id != "" %}
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}" title="Video: {{ page.talk_title | default: page.title | escape }}" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {%- else %}
+      <div class="video-frame video-frame--empty"><p>No recording linked for this talk.</p></div>
+      {%- endif %}
+    </div>
+
+    <div class="talk-abstract">
+      <h2 class="module-title">Abstract</h2>
+      <div class="prose">
+        {%- assign body = content | strip_html | strip -%}
+        {%- if body == "" %}<p class="muted">No abstract was published for this talk.</p>{% else %}{{ content }}{% endif %}
+      </div>
+    </div>
+
+    <aside class="talk-meta" aria-label="Talk details">
+      <div class="flap-row flap-row--stack">
+        {% include flap.html label="Event code" value=page.event_code tone="signal" %}
+        {% include flap.html label="Date" value=date_str %}
+      </div>
+      <dl class="meta-list">
+        <div><dt>Event</dt><dd>{{ page.event | default: cat }}</dd></div>
+        {%- if series %}<div><dt>Series</dt><dd>{{ series.name }}</dd></div>{% endif %}
+        {%- if page.speakers and page.speakers != "" %}<div><dt>Speakers</dt><dd>{{ page.speakers }}</dd></div>{% endif %}
+        {%- if page.sched_url and page.sched_url != "" %}<div><dt>Schedule</dt><dd><a href="{{ page.sched_url }}">Sched entry ↗</a></dd></div>{% endif %}
+        {%- if page.youtube_id and page.youtube_id != "" %}<div><dt>Video</dt><dd><a href="https://www.youtube.com/watch?v={{ page.youtube_id }}">Watch on YouTube ↗</a></dd></div>{% endif %}
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="section more" aria-labelledby="more-title">
+  <div class="rail" aria-hidden="true"><span class="rail-num">+{{ siblings.size | minus: 1 }}</span></div>
+  <div class="more-body">
+    <header class="section-head">
+      <h2 id="more-title">More from {{ page.event | default: cat }}</h2>
+      <a class="section-link" href="{{ '/' | relative_url }}?event={{ page.event_code | downcase }}#index">Open in the index →</a>
+    </header>
+    <ol class="talk-list">
+      {%- for t in siblings %}
+      {%- unless t.url == page.url %}
+      {% include talk-row.html talk=t %}
+      {%- endunless %}
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

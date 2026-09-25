@@ -1,9 +1,14 @@
+# Top-level sections. `num` is the index-rail number shown beside each.
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
+  - title: "Index"
+    num: "01"
+    url: /
+  - title: "Events"
+    num: "02"
     url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Years"
+    num: "03"
+    url: /posts/
   - title: "About"
+    num: "04"
     url: /about/

@@ -1,6 +1,6 @@
 ---
-title: "Posts by Year"
+title: "Years"
+layout: years
 permalink: /posts/
-layout: posts
-author_profile: true
+num: "03"
 ---

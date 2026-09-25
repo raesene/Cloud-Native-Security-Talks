@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="section page" aria-labelledby="page-title">
+  <div class="rail" aria-hidden="true"><span class="rail-num">{{ page.num | default: "—" }}</span></div>
+  <div class="page-body">
+    <header class="section-head section-head--page">
+      <h1 id="page-title" class="page-h1">{{ page.title }}</h1>
+      {%- if page.excerpt_text %}<p class="section-note">{{ page.excerpt_text }}</p>{% endif %}
+    </header>
+    {{ content }}
+  </div>
+</article>

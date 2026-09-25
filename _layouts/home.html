@@ -1,5 +1,97 @@
 ---
-layout: archive
+layout: default
 ---
+{%- assign latest = site.posts.first -%}
+{%- assign first_year = site.posts.last.date | date: "%Y" -%}
+{%- assign groups = site.posts | group_by: "event" -%}
+{%- assign years = site.posts | map: "year" | uniq -%}
 
-{{ content }}
+<section class="section hero" aria-labelledby="hero-title">
+  <div class="rail" aria-hidden="true"><span class="rail-num">01</span></div>
+  <div class="hero-grid">
+    <div class="hero-title">
+      <p class="eyebrow">Index · {{ first_year }}–{{ latest.date | date: "%Y" }}</p>
+      <h1 id="hero-title" class="display">Cloud Native Security Talks</h1>
+    </div>
+    <div class="hero-copy">
+      <div class="lede">{{ content }}</div>
+      <div class="flap-row">
+        {% include flap.html label="Talks" value=site.posts.size %}
+        {% include flap.html label="Events" value=groups.size %}
+        {% include flap.html label="Since" value=first_year %}
+        {% include flap.html label="Latest" value=latest.event_code tone="signal" %}
+      </div>
+    </div>
+    <figure class="plate hero-plate">
+      <img src="{{ '/assets/images/hero.webp' | relative_url }}"
+           srcset="{{ '/assets/images/hero-800.webp' | relative_url }} 800w, {{ '/assets/images/hero.webp' | relative_url }} 1600w"
+           sizes="(min-width: 1100px) 50vw, 100vw"
+           width="1600" height="893"
+           alt="Line drawing of stacked shipping containers in front of a ship's helm wheel; one container door is open to show a red padlock.">
+      <figcaption><span>Plate 01</span><span>Containers, secured</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section index" id="index" aria-labelledby="index-title">
+  <div class="rail" aria-hidden="true"><span class="rail-num">02</span></div>
+  <div class="index-body">
+    <header class="section-head">
+      <h2 id="index-title">Every talk</h2>
+      <p class="section-note">Newest first, grouped by event. Search matches titles, speakers and full abstracts.</p>
+    </header>
+
+    <form class="controls" role="search" onsubmit="return false">
+      <label class="control control--search">
+        <span class="label">Search</span>
+        <input type="search" id="q" name="q" placeholder="e.g. SPIFFE, admission, Ian Coldwater" autocomplete="off">
+      </label>
+      <fieldset class="control control--series">
+        <legend class="label">Series</legend>
+        <div class="seg" id="series">
+          <button type="button" data-series="" aria-pressed="true">All</button>
+          {%- for s in site.data.series %}
+          <button type="button" data-series="{{ s.id }}" aria-pressed="false" title="{{ s.name }}">{{ s.code }}</button>
+          {%- endfor %}
+        </div>
+      </fieldset>
+      <label class="control control--year">
+        <span class="label">Year</span>
+        <select id="year" name="year">
+          <option value="">All years</option>
+          {%- for y in years %}
+          <option value="{{ y }}">{{ y }}</option>
+          {%- endfor %}
+        </select>
+      </label>
+      <div class="control control--count" aria-live="polite">
+        {% include flap.html label="Showing" value=site.posts.size id="count" %}
+      </div>
+    </form>
+    <p class="active-event" id="active-event" hidden>
+      Showing one event: <strong id="active-event-name"></strong>
+      <button type="button" id="clear-event">Show all events</button>
+    </p>
+
+    <div class="groups" id="groups">
+      {%- for g in groups %}
+      {%- assign head = g.items.first %}
+      <section class="event-group" id="{{ head.categories.first | slugify }}" data-event="{{ head.event_code | downcase }}" data-series="{{ head.series }}" data-year="{{ head.year }}">
+        <header class="event-head">
+          <span class="event-code">{{ head.event_code }}</span>
+          <h3 class="event-name">{{ g.name }}</h3>
+          <span class="event-count"><span class="js-shown">{{ g.size }}</span> talk{% if g.size != 1 %}s{% endif %}</span>
+        </header>
+        <ol class="talk-list">
+          {%- for t in g.items %}
+          {% include talk-row.html talk=t %}
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endfor %}
+    </div>
+    <p class="empty" id="empty" hidden>No talks match. Try a shorter search, or clear the series and year filters.</p>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/index.js' | relative_url }}" defer></script>

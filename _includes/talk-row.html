@@ -1,0 +1,17 @@
+{%- assign t = include.talk -%}
+<li class="talk-row" data-series="{{ t.series }}" data-year="{{ t.year }}" data-event="{{ t.event_code | downcase }}" data-text="{{ t.talk_title | default: t.title | append: ' ' | append: t.speakers | downcase | escape }}">
+  <a class="talk-link" href="{{ t.url | relative_url }}">
+    <span class="talk-thumb">
+      {%- if t.youtube_id and t.youtube_id != "" -%}
+        <img src="https://i.ytimg.com/vi/{{ t.youtube_id }}/mqdefault.jpg" alt="" loading="lazy" decoding="async" width="160" height="90">
+      {%- else -%}
+        <span class="talk-thumb-empty">No video</span>
+      {%- endif -%}
+    </span>
+    <span class="talk-main">
+      <span class="talk-title">{{ t.talk_title | default: t.title }}</span>
+      {%- if t.speakers and t.speakers != "" %}<span class="talk-speakers">{{ t.speakers }}</span>{% endif -%}
+    </span>
+    <span class="talk-date">{{ t.date | date: "%Y-%m-%d" }}</span>
+  </a>
+</li>

@@ -1,0 +1,14 @@
+{%- comment -%}
+  Split-flap value: one mono cell per character, each with a 1px flap seam.
+  include.value  — the text to show
+  include.label  — small caption above the cells (optional)
+  include.tone   — "signal" (vermilion, the value that matters) or "transit" (amber)
+  include.id     — id for the cell group, so scripts can update it (optional)
+{%- endcomment -%}
+{%- assign chars = include.value | append: "" | split: "" -%}
+<div class="flap{% if include.tone %} flap--{{ include.tone }}{% endif %}">
+  {%- if include.label %}<span class="flap-label">{{ include.label }}</span>{% endif -%}
+  <span class="flap-cells"{% if include.id %} id="{{ include.id }}"{% endif %} aria-label="{{ include.value }}">
+    {%- for c in chars -%}<span class="flap-cell{% if c == ' ' %} is-blank{% endif %}" aria-hidden="true">{{ c }}</span>{%- endfor -%}
+  </span>
+</div>

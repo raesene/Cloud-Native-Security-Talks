@@ -1,6 +1,6 @@
 ---
-title: "Posts by Category"
-layout: categories
+title: "Events"
+layout: events
 permalink: /categories/
-author_profile: true
+num: "02"
 ---

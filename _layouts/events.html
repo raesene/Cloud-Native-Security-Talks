@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<section class="section page" aria-labelledby="page-title">
+  <div class="rail" aria-hidden="true"><span class="rail-num">{{ page.num }}</span></div>
+  <div class="page-body">
+    <header class="section-head section-head--page">
+      <h1 id="page-title" class="page-h1">Events</h1>
+      <p class="section-note">{{ site.data.series.size }} series, grouped by event. Pick an event to see its talks in the index.</p>
+    </header>
+
+    {%- for s in site.data.series %}
+    {%- assign talks = site.posts | where: "series", s.id %}
+    {%- assign events = talks | group_by: "event" %}
+    <section class="series" id="series-{{ s.id }}" aria-labelledby="series-{{ s.id }}-title">
+      <figure class="plate series-plate">
+        <img src="{{ s.image | relative_url }}" width="720" height="538" loading="lazy" alt="{{ s.alt }}">
+      </figure>
+      <div class="series-body">
+        <header class="series-head">
+          <span class="event-code">{{ s.code }}</span>
+          <h2 id="series-{{ s.id }}-title">{{ s.name }}</h2>
+          <span class="event-count">{{ talks.size }} talks · {{ events.size }} event{% if events.size != 1 %}s{% endif %}</span>
+        </header>
+        <ol class="event-list">
+          {%- for e in events %}
+          {%- assign head = e.items.first %}
+          <li id="{{ head.categories.first | slugify }}">
+            <a href="{{ '/' | relative_url }}?event={{ head.event_code | downcase }}#index">
+              <span class="event-code">{{ head.event_code }}</span>
+              <span class="event-name">{{ e.name }}</span>
+              <span class="event-bar" style="--n: {{ e.size }}" aria-hidden="true"></span>
+              <span class="event-n">{{ e.size }}</span>
+            </a>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </section>
+    {%- endfor %}
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{%- assign years = site.posts | group_by: "year" -%}
+{%- assign max = 0 -%}
+{%- for y in years %}{% if y.size > max %}{% assign max = y.size %}{% endif %}{% endfor -%}
+<section class="section page" aria-labelledby="page-title">
+  <div class="rail" aria-hidden="true"><span class="rail-num">{{ page.num }}</span></div>
+  <div class="page-body">
+    <header class="section-head section-head--page">
+      <h1 id="page-title" class="page-h1">Years</h1>
+      <p class="section-note">Talks indexed per year. Pick a year to see its talks in the index.</p>
+    </header>
+    <ol class="year-list" style="--max: {{ max }}">
+      {%- for y in years %}
+      {%- assign codes = y.items | map: "event_code" | uniq %}
+      <li>
+        <a href="{{ '/' | relative_url }}?year={{ y.name }}#index">
+          {% include flap.html value=y.name %}
+          <span class="year-bar" style="--n: {{ y.size }}" aria-hidden="true"></span>
+          <span class="year-n">{{ y.size }} talks</span>
+          <span class="year-events">{{ codes | join: " · " }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

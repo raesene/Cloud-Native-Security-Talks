@@ -1,0 +1,27 @@
+# Event series, in the order they appear on the Events page.
+# `id` matches the `series` front matter written by scripts/enrich_posts.py.
+- id: kubecon-eu
+  name: KubeCon Europe
+  code: KC-EU
+  image: /assets/images/series/kubecon-eu.webp
+  alt: A ship's helm wheel over a folded map of Europe
+- id: kubecon-na
+  name: KubeCon North America
+  code: KC-NA
+  image: /assets/images/series/kubecon-na.webp
+  alt: A lighthouse above a quay stacked with shipping containers
+- id: securitycon
+  name: CloudNativeSecurityCon
+  code: CNSC
+  image: /assets/images/series/securitycon.webp
+  alt: A vault door set into a wall of shipping containers
+- id: security-day
+  name: Cloud Native Security Day
+  code: CNSD
+  image: /assets/images/series/security-day.webp
+  alt: A watchtower of stacked containers sweeping a searchlight over a yard
+- id: kubecon-china
+  name: KubeCon China
+  code: KC-CN
+  image: /assets/images/series/kubecon-china.webp
+  alt: A cable-stayed bridge carrying a train of shipping containers

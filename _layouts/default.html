@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-search-url="{{ '/search.json' | relative_url }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% include analytics.html %}
+</head>
+<body class="layout-{{ page.layout }}">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, home">
+      <span class="wordmark-cells" aria-hidden="true"><i></i><i></i><i></i><i class="is-signal"></i></span>
+      <span class="wordmark-text">Cloud Native<br>Security Talks</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        {% for item in site.data.navigation.main %}
+          {% assign active = false %}
+          {% if page.url == item.url %}{% assign active = true %}{% endif %}
+          {% if item.url == '/categories/' and page.layout == 'talk' %}{% assign active = true %}{% endif %}
+          <li><a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}><span class="nav-num">{{ item.num }}</span>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <a class="masthead-feed" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </header>
+
+  <main id="main" class="frame">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="footer-cell">
+      <span class="label">Maintained by</span>
+      <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a>
+    </div>
+    <div class="footer-cell">
+      <span class="label">Add a talk</span>
+      <a href="https://github.com/{{ site.repository }}">github.com/{{ site.repository }}</a>
+    </div>
+    <div class="footer-cell">
+      <span class="label">Feed</span>
+      <a href="{{ '/feed.xml' | relative_url }}">/feed.xml</a>
+    </div>
+    <div class="footer-cell footer-mark" aria-hidden="true">{{ site.posts.size }}</div>
+  </footer>
+</body>
+</html>

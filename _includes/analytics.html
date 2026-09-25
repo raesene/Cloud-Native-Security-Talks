@@ -1,0 +1,9 @@
+{% if site.analytics.google_tracking_id and jekyll.environment == 'production' %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google_tracking_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.analytics.google_tracking_id }}');
+</script>
+{% endif %}
